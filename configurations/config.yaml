@@ -1,0 +1,10 @@
+defaults:
+- prediction_tasks: gene_bp
+
+# paths pointing to folder were trained model weights are stored
+infer_path_weights: "" # leave blank for most recently trained model
+explain_path_weights: "" # leave blank for most recently trained model
+
+# whether to load splitted data from disk
+save_split: true
+debug_load_split: false
