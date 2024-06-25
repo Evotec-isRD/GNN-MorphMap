@@ -1,0 +1,77 @@
+SEED: 0
+
+# to manually define supervision edges from node similarity saved to a tsv file
+# requires:
+#     - /data/supervision/orf_similarity.tsv (contains similarities between nodes)
+#     - /tests/hetionet-v1.0-nodes.tsv (contains node mappings: name -> unique identifier)
+Data:
+  use_supervised_model: false # unsupervised or supervised model
+  mp_mode: "enriched" # 'default', 'disjoint', 'joint', 'enriched'
+  threshold_low: -0.3
+  threshold_high: 0.3
+  threshold_center: 0.001
+  use_external_test_data: true # use test data from external data source (non-supervised models only, needs to be true for mp_mode: "enriched")
+  external_test_data_path: "data/external_test/test_edges_bp.tsv"
+  filter_external_test_nodes1: "tests/green_bp_nodes.tsv"
+  filter_external_test_nodes2: "tests/green_geneids.tsv"
+
+# GNN model and training parameters
+NN_settings:
+  NUM_FEATURES: 0
+  HIDDEN_SIZE: 100
+  OUT_CHANNELS: 50
+  P_DROPOUT: 0.5
+  EPOCHS: 10000
+  LEARNING_RATE: 0.01
+
+data_metadata_name: "data/gene_bp_data_metadata.pt"
+green_nodes: "tests/green_bp_nodes.tsv"
+link_to_predict: gene_bp
+relation_types: gene_disease gene_mf gene_cc gene_pathway gene_anatomy gene_compound disease_anatomy disease_disease compound_compound compound_disease disease_symptom compound_sideeffect compound_atc class_compound
+node_mapping_file: "data/gene_bp_node_mapping_file.pkl"
+link_to_predict_file: "data/gene_bp_edge_index.pt"
+
+top_k_diseases: 100
+add_noise_when_testing: false
+resample_edges_during_training: true
+nSamples: 2048
+
+# tranformation parameters
+transform_settings:
+  num_val: 0.05
+  num_test: 0.15
+  is_undirected: true
+  split_labels: true
+  add_negative_train_samples: true
+  disjoint_train_ratio: 0.0
+
+# Model selection and metrics parameters
+use_hits: true
+nHits:
+- 10
+- 25
+- 50
+- 100
+- 250
+- 500
+hits_mode: 'target' # 'source', 'target', block1', 'block2'
+model_selection: "hits" # 'auc', 'ap', 'hits'
+
+# Inference
+inference:
+  mode: "default" # compute edges between block1<->block2 ("default"), , block1<->block1 ("block1"), block2<->block2 ("block2")
+  block1_id: "" # node identifiers from block1 (comma separated, blank for entire block)
+  block2_id: "" # node identifiers from block2 (comma separated, blank for entire block)
+  save_all: False
+
+# Explaining module parameters
+explain_settings:
+  node1_id: "" # node1 identifiers
+  node2_id: "" # node2 identifiers
+  train_explainer_edges: true
+  train_explainer_nodes: false
+  nEpochs_explain: 100 # PyG default: 100
+  lr_explain: 1e-2 # PyG default: 1e-2
+  plot_explainer: true
+  no_nodes_explain: 100 # plot no_nodes_explain most important nodes (not implemented yet)
+  no_edges_explain: 100 # plot no_edges_explain most important edges (not implemented yet)
