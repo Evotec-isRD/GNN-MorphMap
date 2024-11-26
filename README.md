@@ -33,6 +33,8 @@ This will generate *orf_scores_merged.tsv* file and *crispr_scores_merged.tsv* i
 	pathways.tsv
 	orf_scores_clean.zip
 	crispr_scores_clean.zip
+	data/crispr_scores_merged.tsv
+	data/orf_scores_merged.tsv
 	supervised_weak/weakly_supervised_orf__similarity.csv
 	supervised_strong/strongly_supervised_orf__similarity.csv
 	supervised_weak/weakly_supervised_crispr__similarity.csv
@@ -64,3 +66,10 @@ CRISPR: https://drive.google.com/file/d/1yW1vZydttyvb7ebfTotuHFP8O_ZDIr_w/view?u
 ORF: https://drive.google.com/file/d/1Uo27o3jUVMb0u4wN2cTCpOjG51nWZL6P/view?usp=drive_link
 
 CRISPR: https://drive.google.com/file/d/1QBPSXm9LG2kT25EGXAqgtwPVkdFf5dbR/view?usp=drive_link
+
+
+#### crispr_scores_merged.tsv and orf_scores_merged.tsv can be accessed from here
+
+crispr_scores_merged - https://drive.google.com/file/d/1RZ2_vK6t2w14R6CFIfvo50kZbfdiW4Si/view?usp=sharing
+
+orf_scores_merged - https://drive.google.com/file/d/1E0C8w1I-zyS1hSHoTm9mC5PMzI7QLWY_/view?usp=sharing
