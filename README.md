@@ -54,7 +54,7 @@ Each trained model file should be accompanied by the data object
 3. [Heatmap.ipynb](Heatmap.ipynb) : for a set of genes, produces a clustergram based on MorphMap similarities, with KG score indicated on top of the cells
 4. [SLCOR.ipynb](SLCOR.ipynb) : produces a set of figures illustrating the connection between Solute Carriers and Olfactory Receptors
 
-#### ORF and CRISPR data (Shared on April 4th, 2024)
+### ORF and CRISPR data (Shared on April 4th, 2024)
 
 Here are the ORF and CRISPR profiles
 
@@ -69,7 +69,7 @@ ORF: https://drive.google.com/file/d/1Uo27o3jUVMb0u4wN2cTCpOjG51nWZL6P/view?usp=
 CRISPR: https://drive.google.com/file/d/1QBPSXm9LG2kT25EGXAqgtwPVkdFf5dbR/view?usp=drive_link
 
 
-#### Pre-trained models, crispr_scores and orf_scores can be accessed from the following link on Zenodo
+### Pre-trained models, crispr_scores and orf_scores can be accessed from the following link on Zenodo
 https://zenodo.org/records/14243440
 
 
