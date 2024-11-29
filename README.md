@@ -69,8 +69,7 @@ ORF: https://drive.google.com/file/d/1Uo27o3jUVMb0u4wN2cTCpOjG51nWZL6P/view?usp=
 CRISPR: https://drive.google.com/file/d/1QBPSXm9LG2kT25EGXAqgtwPVkdFf5dbR/view?usp=drive_link
 
 
-#### crispr_scores_merged.tsv and orf_scores_merged.tsv can be accessed from here
+#### Pre-trained models, crispr_scores and orf_scores can be accessed from the following link on Zenodo
+https://zenodo.org/records/14243440
 
-crispr_scores_merged - https://drive.google.com/file/d/1RZ2_vK6t2w14R6CFIfvo50kZbfdiW4Si/view?usp=sharing
 
-orf_scores_merged - https://drive.google.com/file/d/1E0C8w1I-zyS1hSHoTm9mC5PMzI7QLWY_/view?usp=sharing
