@@ -1,7 +1,7 @@
 # GNN-MorphMap
 Validation of the morphological fingerprint gene-gene similarities using knowledge graph and graph neural networks
 
-This repository hosts knowledge graph analysis scripts associated with our paper titled 'Title'. 
+This repository hosts knowledge graph analysis scripts associated with our paper titled 'Morphological map of under- and over-expression of genes in human cells'. 
 The parent repository can be found at: [2024_Chandrasekaran_Morphmap](https://github.com/jump-cellpainting/2024_Chandrasekaran_Morphmap).
 
 ## Installation
@@ -11,6 +11,10 @@ conda env create -f environment.yml
 conda activate morphmap
 poetry install
 ```
+
+### Input data
+Data, Pre-trained models, crispr_scores and orf_scores can be accessed from the following link on Zenodo
+https://zenodo.org/records/14243440
 
 ### Usage:
 	python make_predictions.py gene_mf
@@ -43,9 +47,9 @@ This will generate *orf_scores_merged.tsv* file and *crispr_scores_merged.tsv* i
 
 Each trained model file should be accompanied by the data object
 	
-	trained_model/gene_mf/gene_mf_data_object.pt
-	trained_model/gene_bp/gene_bp_data_object.pt
-	trained_model/gene_pathway/gene_pathway_data_object.pt
+	trained_model/gene_mf/output_transform.pt
+	trained_model/gene_bp/output_transform.pt
+	trained_model/gene_pathway/output_transform.pt
 
 ### Notebooks
 
@@ -69,7 +73,6 @@ ORF: https://drive.google.com/file/d/1Uo27o3jUVMb0u4wN2cTCpOjG51nWZL6P/view?usp=
 CRISPR: https://drive.google.com/file/d/1QBPSXm9LG2kT25EGXAqgtwPVkdFf5dbR/view?usp=drive_link
 
 
-### Pre-trained models, crispr_scores and orf_scores can be accessed from the following link on Zenodo
-https://zenodo.org/records/14243440
+
 
 
