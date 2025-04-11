@@ -14,7 +14,7 @@ poetry install
 
 ### Input data
 Data, Pre-trained models, crispr_scores and orf_scores can be accessed from the following link on Zenodo
-https://zenodo.org/records/14243440
+https://zenodo.org/records/15111452
 
 ### Usage:
 	python make_predictions.py gene_mf
